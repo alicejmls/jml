@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GetLatestDataDataSet" targetNamespace="http://tempuri.org/GetLatestDataDataSet.xsd" xmlns:mstns="http://tempuri.org/GetLatestDataDataSet.xsd" xmlns="http://tempuri.org/GetLatestDataDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="JYInforDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JYInforDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LXGuardianCheck.Properties.Settings.GlobalReference.Default.JYInforDBConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetLatestDataTableAdapter" GeneratorDataComponentClassName="GetLatestDataTableAdapter" Name="GetLatestData" UserDataComponentName="GetLatestDataTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JYInforDBConnectionString (Settings)" DbObjectName="`def`.`JYInforDB`.`GetLatestData`" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>`JYInforDB`.`GetLatestData`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DeviceID" DataSetColumn="DeviceID" />
+              <Mapping SourceColumn="DataTime" DataSetColumn="DataTime" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Dust" DataSetColumn="Dust" />
+              <Mapping SourceColumn="Noise" DataSetColumn="Noise" />
+              <Mapping SourceColumn="Temprature" DataSetColumn="Temprature" />
+              <Mapping SourceColumn="Humidity" DataSetColumn="Humidity" />
+              <Mapping SourceColumn="AirPress" DataSetColumn="AirPress" />
+              <Mapping SourceColumn="WindSpeed" DataSetColumn="WindSpeed" />
+              <Mapping SourceColumn="WindDir" DataSetColumn="WindDir" />
+              <Mapping SourceColumn="PM1" DataSetColumn="PM1" />
+              <Mapping SourceColumn="PM2.5" DataSetColumn="PM2.5" />
+              <Mapping SourceColumn="PM10" DataSetColumn="PM10" />
+              <Mapping SourceColumn="PumpFlow" DataSetColumn="PumpFlow" />
+              <Mapping SourceColumn="PumpInletPress" DataSetColumn="PumpInletPress" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GetLatestDataDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="GetLatestDataDataSet" msprop:Generator_DataSetName="GetLatestDataDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GetLatestData" msprop:Generator_UserTableName="GetLatestData" msprop:Generator_RowDeletedName="GetLatestDataRowDeleted" msprop:Generator_RowChangedName="GetLatestDataRowChanged" msprop:Generator_RowClassName="GetLatestDataRow" msprop:Generator_RowChangingName="GetLatestDataRowChanging" msprop:Generator_RowEvArgName="GetLatestDataRowChangeEvent" msprop:Generator_RowEvHandlerName="GetLatestDataRowChangeEventHandler" msprop:Generator_TableClassName="GetLatestDataDataTable" msprop:Generator_TableVarName="tableGetLatestData" msprop:Generator_RowDeletingName="GetLatestDataRowDeleting" msprop:Generator_TablePropName="GetLatestData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DeviceID" msprop:Generator_UserColumnName="DeviceID" msprop:Generator_ColumnVarNameInTable="columnDeviceID" msprop:Generator_ColumnPropNameInRow="DeviceID" msprop:Generator_ColumnPropNameInTable="DeviceIDColumn" type="xs:int" />
+              <xs:element name="DataTime" msprop:Generator_UserColumnName="DataTime" msprop:Generator_ColumnVarNameInTable="columnDataTime" msprop:Generator_ColumnPropNameInRow="DataTime" msprop:Generator_ColumnPropNameInTable="DataTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dust" msprop:Generator_UserColumnName="Dust" msprop:Generator_ColumnVarNameInTable="columnDust" msprop:Generator_ColumnPropNameInRow="Dust" msprop:Generator_ColumnPropNameInTable="DustColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="Noise" msprop:Generator_UserColumnName="Noise" msprop:Generator_ColumnVarNameInTable="columnNoise" msprop:Generator_ColumnPropNameInRow="Noise" msprop:Generator_ColumnPropNameInTable="NoiseColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="Temprature" msprop:Generator_UserColumnName="Temprature" msprop:Generator_ColumnVarNameInTable="columnTemprature" msprop:Generator_ColumnPropNameInRow="Temprature" msprop:Generator_ColumnPropNameInTable="TempratureColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="Humidity" msprop:Generator_UserColumnName="Humidity" msprop:Generator_ColumnVarNameInTable="columnHumidity" msprop:Generator_ColumnPropNameInRow="Humidity" msprop:Generator_ColumnPropNameInTable="HumidityColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="AirPress" msprop:Generator_UserColumnName="AirPress" msprop:Generator_ColumnVarNameInTable="columnAirPress" msprop:Generator_ColumnPropNameInRow="AirPress" msprop:Generator_ColumnPropNameInTable="AirPressColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="WindSpeed" msprop:Generator_UserColumnName="WindSpeed" msprop:Generator_ColumnVarNameInTable="columnWindSpeed" msprop:Generator_ColumnPropNameInRow="WindSpeed" msprop:Generator_ColumnPropNameInTable="WindSpeedColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="WindDir" msprop:Generator_UserColumnName="WindDir" msprop:Generator_ColumnVarNameInTable="columnWindDir" msprop:Generator_ColumnPropNameInRow="WindDir" msprop:Generator_ColumnPropNameInTable="WindDirColumn" type="xs:float" minOccurs="0" />
+              <xs:element name="PM1" msprop:Generator_UserColumnName="PM1" msprop:Generator_ColumnVarNameInTable="columnPM1" msprop:Generator_ColumnPropNameInRow="PM1" msprop:Generator_ColumnPropNameInTable="PM1Column" type="xs:float" minOccurs="0" />
+              <xs:element name="PM2.5" msprop:Generator_UserColumnName="PM2.5" msprop:Generator_ColumnVarNameInTable="_columnPM2_5" msprop:Generator_ColumnPropNameInRow="_PM2_5" msprop:Generator_ColumnPropNameInTable="_PM2_5Column" type="xs:float" minOccurs="0" />
+              <xs:element name="PM10" msprop:Generator_UserColumnName="PM10" msprop:Generator_ColumnVarNameInTable="columnPM10" msprop:Generator_ColumnPropNameInRow="PM10" msprop:Generator_ColumnPropNameInTable="PM10Column" type="xs:float" minOccurs="0" />
+              <xs:element name="PumpFlow" msprop:Generator_UserColumnName="PumpFlow" msprop:Generator_ColumnVarNameInTable="columnPumpFlow" msprop:Generator_ColumnPropNameInRow="PumpFlow" msprop:Generator_ColumnPropNameInTable="PumpFlowColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PumpInletPress" msprop:Generator_UserColumnName="PumpInletPress" msprop:Generator_ColumnVarNameInTable="columnPumpInletPress" msprop:Generator_ColumnPropNameInRow="PumpInletPress" msprop:Generator_ColumnPropNameInTable="PumpInletPressColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

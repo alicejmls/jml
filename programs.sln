@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "programs", "programs\programs.csproj", "{8A3E12A2-EFCB-4140-9B4A-DE3D8CFFF7E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LXGuardianCheck", "..\..\LXGuardianCheck\LXGuardianCheck.csproj", "{3885B55C-0085-4637-81E9-AB0527ECA8D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A3E12A2-EFCB-4140-9B4A-DE3D8CFFF7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3E12A2-EFCB-4140-9B4A-DE3D8CFFF7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3E12A2-EFCB-4140-9B4A-DE3D8CFFF7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3E12A2-EFCB-4140-9B4A-DE3D8CFFF7E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3885B55C-0085-4637-81E9-AB0527ECA8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3885B55C-0085-4637-81E9-AB0527ECA8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3885B55C-0085-4637-81E9-AB0527ECA8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3885B55C-0085-4637-81E9-AB0527ECA8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
