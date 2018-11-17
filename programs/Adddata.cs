@@ -119,6 +119,7 @@ namespace programs
         private void button2_Click(object sender, EventArgs e)
         {//取消
          this.Visible = false;
+
         }
     }
 }
