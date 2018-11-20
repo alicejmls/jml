@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.刷新 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvsssj = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ExportExcels = new System.Windows.Forms.Button();
             this.panlHour = new System.Windows.Forms.Panel();
             this.datehours = new System.Windows.Forms.DateTimePicker();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -72,10 +73,8 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ExportExcels = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsssj)).BeginInit();
@@ -116,28 +115,38 @@
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(889, 358);
+            this.tabControl.Size = new System.Drawing.Size(889, 354);
             this.tabControl.TabIndex = 1;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.ExportExcels);
+            this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.刷新);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.dgvsssj);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(881, 332);
+            this.tabPage1.Size = new System.Drawing.Size(881, 328);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "实时数据";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(418, 297);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "曲线图";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // 刷新
             // 
             this.刷新.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.刷新.Location = new System.Drawing.Point(33, 301);
+            this.刷新.Location = new System.Drawing.Point(33, 297);
             this.刷新.Name = "刷新";
             this.刷新.Size = new System.Drawing.Size(75, 23);
             this.刷新.TabIndex = 4;
@@ -148,7 +157,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(24, 342);
+            this.button1.Location = new System.Drawing.Point(24, 338);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -170,12 +179,13 @@
             this.dgvsssj.ReadOnly = true;
             this.dgvsssj.RowTemplate.Height = 23;
             this.dgvsssj.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvsssj.Size = new System.Drawing.Size(875, 289);
+            this.dgvsssj.Size = new System.Drawing.Size(875, 285);
             this.dgvsssj.TabIndex = 0;
             this.dgvsssj.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvsssj_CellPainting);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ExportExcels);
             this.tabPage2.Controls.Add(this.panlHour);
             this.tabPage2.Controls.Add(this.dataGridView3);
             this.tabPage2.Controls.Add(this.query);
@@ -190,10 +200,21 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(881, 332);
+            this.tabPage2.Size = new System.Drawing.Size(881, 328);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "统计数据";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ExportExcels
+            // 
+            this.ExportExcels.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ExportExcels.Location = new System.Drawing.Point(753, 31);
+            this.ExportExcels.Name = "ExportExcels";
+            this.ExportExcels.Size = new System.Drawing.Size(75, 23);
+            this.ExportExcels.TabIndex = 4;
+            this.ExportExcels.Text = "导出excel";
+            this.ExportExcels.UseVisualStyleBackColor = true;
+            this.ExportExcels.Click += new System.EventHandler(this.ExportExcels_Click);
             // 
             // panlHour
             // 
@@ -226,7 +247,7 @@
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 23;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(865, 267);
+            this.dataGridView3.Size = new System.Drawing.Size(865, 263);
             this.dataGridView3.TabIndex = 10;
             // 
             // query
@@ -322,7 +343,7 @@
             this.plCondition.Controls.Add(this.label2);
             this.plCondition.Location = new System.Drawing.Point(179, 28);
             this.plCondition.Name = "plCondition";
-            this.plCondition.Size = new System.Drawing.Size(646, 25);
+            this.plCondition.Size = new System.Drawing.Size(562, 25);
             this.plCondition.TabIndex = 4;
             // 
             // comboBox1
@@ -418,7 +439,7 @@
             this.tabPage3.Controls.Add(this.dgvgjqd);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(881, 332);
+            this.tabPage3.Size = new System.Drawing.Size(881, 328);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "工地清单";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -426,7 +447,7 @@
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button8.Location = new System.Drawing.Point(326, 306);
+            this.button8.Location = new System.Drawing.Point(326, 302);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 5;
@@ -437,7 +458,7 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.Location = new System.Drawing.Point(175, 306);
+            this.button4.Location = new System.Drawing.Point(175, 302);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 5;
@@ -448,7 +469,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Location = new System.Drawing.Point(21, 306);
+            this.button2.Location = new System.Drawing.Point(21, 302);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -459,7 +480,7 @@
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button6.Location = new System.Drawing.Point(310, 401);
+            this.button6.Location = new System.Drawing.Point(310, 397);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 4;
@@ -470,7 +491,7 @@
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button5.Location = new System.Drawing.Point(229, 401);
+            this.button5.Location = new System.Drawing.Point(229, 397);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
@@ -481,7 +502,7 @@
             // insertdate
             // 
             this.insertdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.insertdate.Location = new System.Drawing.Point(148, 401);
+            this.insertdate.Location = new System.Drawing.Point(148, 397);
             this.insertdate.Name = "insertdate";
             this.insertdate.Size = new System.Drawing.Size(75, 23);
             this.insertdate.TabIndex = 2;
@@ -492,7 +513,7 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.Location = new System.Drawing.Point(67, 401);
+            this.button3.Location = new System.Drawing.Point(67, 397);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 1;
@@ -515,7 +536,7 @@
             this.dgvgjqd.ReadOnly = true;
             this.dgvgjqd.RowTemplate.Height = 23;
             this.dgvgjqd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvgjqd.Size = new System.Drawing.Size(881, 300);
+            this.dgvgjqd.Size = new System.Drawing.Size(881, 296);
             this.dgvgjqd.TabIndex = 0;
             this.dgvgjqd.CancelRowEdit += new System.Windows.Forms.QuestionEventHandler(this.dgvgjqd_CancelRowEdit);
             this.dgvgjqd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvgjqd_CellContentClick);
@@ -529,7 +550,7 @@
             // toolStripContainer2.ContentPanel
             // 
             this.toolStripContainer2.ContentPanel.Controls.Add(this.toolStrip1);
-            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(913, 13);
+            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(913, 38);
             this.toolStripContainer2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStripContainer2.Location = new System.Drawing.Point(0, 391);
             this.toolStripContainer2.Name = "toolStripContainer2";
@@ -548,8 +569,8 @@
             this.toolStripLabel2,
             this.toolStripLabel3,
             this.toolStripLabel4,
-            this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(31, 4);
+            this.toolStripLabel5});
+            this.toolStrip1.Location = new System.Drawing.Point(19, 4);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(396, 25);
             this.toolStrip1.TabIndex = 0;
@@ -579,45 +600,22 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(96, 17);
             this.toolStripLabel4.Text = "toolStripLabel4";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 20);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ExportExcels
+            // toolStripLabel5
             // 
-            this.ExportExcels.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ExportExcels.Location = new System.Drawing.Point(146, 301);
-            this.ExportExcels.Name = "ExportExcels";
-            this.ExportExcels.Size = new System.Drawing.Size(75, 23);
-            this.ExportExcels.TabIndex = 4;
-            this.ExportExcels.Text = "导出excel";
-            this.ExportExcels.UseVisualStyleBackColor = true;
-            this.ExportExcels.Click += new System.EventHandler(this.ExportExcels_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(822, 27);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 11;
-            this.button7.UseVisualStyleBackColor = true;
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(96, 17);
+            this.toolStripLabel5.Text = "toolStripLabel5";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 429);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.toolStripContainer2);
             this.Controls.Add(this.checkBox1);
@@ -695,10 +693,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button 刷新;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button ExportExcels;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
     }
 }
 

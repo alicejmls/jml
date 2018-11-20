@@ -423,10 +423,10 @@ namespace programs
         private void ExportExcels_Click(object sender, EventArgs e)
         {
             string fileName = "E:" + "\\KKHMD.xls";
-            ExportExcel(fileName, dgvsssj);
+            ExportExcel(fileName, dataGridView3);
         }
         //导出excel
-        private void ExportExcel(string fileName, DataGridView dgvsssj)
+        private void ExportExcel(string fileName, DataGridView dataGridView3)
         {
             string saveFileName = "";
             SaveFileDialog saveDialog = new SaveFileDialog();
@@ -446,16 +446,16 @@ namespace programs
             Microsoft.Office.Interop.Excel.Workbook workbook = workbooks.Add(Microsoft.Office.Interop.Excel.XlWBATemplate.xlWBATWorksheet);
             Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[1];//取得sheet1
                                                                                                                                   //写入标题
-            for (int i = 0; i < dgvsssj.ColumnCount; i++)
+            for (int i = 0; i < dataGridView3.ColumnCount; i++)
             {
-                worksheet.Cells[1, i + 1] = dgvsssj.Columns[i].HeaderText;
+                worksheet.Cells[1, i + 1] = dataGridView3.Columns[i].HeaderText;
             }
             //写入数值
-            for (int r = 0; r < dgvsssj.Rows.Count; r++)
+            for (int r = 0; r < dataGridView3.Rows.Count; r++)
             {
-                for (int i = 0; i < dgvsssj.ColumnCount; i++)
+                for (int i = 0; i < dataGridView3.ColumnCount; i++)
                 {
-                    worksheet.Cells[r + 2, i + 1] = dgvsssj.Rows[r].Cells[i].Value;
+                    worksheet.Cells[r + 2, i + 1] = dataGridView3.Rows[r].Cells[i].Value;
                 }
                 System.Windows.Forms.Application.DoEvents();
             }
@@ -477,6 +477,13 @@ namespace programs
             MessageBox.Show("文件： " + fileName + ".xls 保存成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {//曲线图
+            graph gh = new graph();
+            gh.Show();
+        }
+        
     }
 
 }
