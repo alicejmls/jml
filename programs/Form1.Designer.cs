@@ -73,8 +73,8 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvsssj)).BeginInit();
@@ -363,6 +363,7 @@
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 6;
             this.label3.Text = "工地名称：";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cBoxDeviceCode
             // 
@@ -550,7 +551,7 @@
             // toolStripContainer2.ContentPanel
             // 
             this.toolStripContainer2.ContentPanel.Controls.Add(this.toolStrip1);
-            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(913, 38);
+            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(913, 13);
             this.toolStripContainer2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStripContainer2.Location = new System.Drawing.Point(0, 391);
             this.toolStripContainer2.Name = "toolStripContainer2";
@@ -600,16 +601,16 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(96, 17);
             this.toolStripLabel4.Text = "toolStripLabel4";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
             this.toolStripLabel5.Size = new System.Drawing.Size(96, 17);
             this.toolStripLabel5.Text = "toolStripLabel5";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
